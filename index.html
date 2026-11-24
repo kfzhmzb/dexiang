@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>德祥（广州）生物科技有限公司</title>
+<meta name="description" content="德祥（广州）生物科技有限公司，立足广州，以稳定的供应能力与配套技术为支撑，为客户提供从选型、交付到长期使用的完整服务。">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 86px; }
+  :root {
+    --blue: #2563EB;
+    --blue-deep: #1D4ED8;
+    --cyan: #06B6D4;
+    --amber: #F59E0B;
+    --green: #10B981;
+    --violet: #7C3AED;
+    --ink: #0F172A;
+    --body: #475569;
+    --muted: #8296AD;
+    --bg: #F6F8FC;
+    --card: #FFFFFF;
+    --border: #E7EBF3;
+    --shadow: 0 12px 32px rgba(15, 23, 42, 0.07), 0 2px 8px rgba(15, 23, 42, 0.04);
+    --shadow-sm: 0 4px 14px rgba(15, 23, 42, 0.05);
+  }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--body);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
+                 "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.8;
+  }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
+
+  /* ---------- 导航 ---------- */
+  .nav {
+    position: sticky; top: 0; z-index: 40;
+    background: rgba(255, 255, 255, 0.86);
+    backdrop-filter: saturate(180%) blur(14px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-in {
+    max-width: 1180px; margin: 0 auto; padding: 14px 28px;
+    display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  }
+  .logo { display: inline-flex; align-items: center; gap: 10px; }
+  .logo-mark {
+    width: 36px; height: 36px; border-radius: 11px; flex: none;
+    background: linear-gradient(135deg, var(--blue) 0%, var(--cyan) 100%);
+    display: grid; place-items: center;
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.28);
+  }
+  .logo-txt { display: flex; flex-direction: column; line-height: 1.28; }
+  .logo-cn { font-size: 15px; font-weight: 600; color: var(--ink); letter-spacing: 0.4px; }
+  .logo-en { font-size: 9px; letter-spacing: 2.4px; color: var(--muted); }
+  .nav-menu { display: flex; align-items: center; gap: 6px; }
+  .nav-menu a {
+    padding: 8px 14px; border-radius: 9px;
+    font-size: 14px; color: var(--body);
+    transition: background 0.2s, color 0.2s;
+  }
+  .nav-menu a:hover { background: #EEF3FF; color: var(--blue); }
+  .nav-cta {
+    padding: 9px 20px; border-radius: 999px;
+    font-size: 13.5px; font-weight: 500; color: #fff;
+    background: linear-gradient(135deg, var(--blue) 0%, var(--blue-deep) 100%);
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.28);
+    transition: transform 0.18s, box-shadow 0.22s;
+    white-space: nowrap;
+  }
+  .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 10px 24px rgba(37, 99, 235, 0.34); }
+
+  /* ---------- 首屏 ---------- */
+  .hero { position: relative; overflow: hidden; padding: 78px 0 88px; }
+  .hero::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background:
+      radial-gradient(ellipse 46% 46% at 92% 4%, rgba(6, 182, 212, 0.10), transparent 62%),
+      radial-gradient(ellipse 42% 42% at 66% 88%, rgba(37, 99, 235, 0.07), transparent 64%);
+  }
+  .hero-in {
+    position: relative;
+    display: grid; grid-template-columns: minmax(0, 1.06fr) minmax(0, 0.94fr);
+    gap: 48px; align-items: center;
+  }
+  .badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 6px 14px 6px 10px; border-radius: 999px;
+    background: #fff; border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    font-size: 12.5px; color: var(--body);
+    margin-bottom: 26px;
+  }
+  .badge i {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--green); box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.14);
+  }
+  .hero h1 {
+    margin: 0 0 22px;
+    font-size: clamp(34px, 4.6vw, 58px);
+    line-height: 1.24; font-weight: 700; letter-spacing: -0.5px;
+    color: var(--ink);
+  }
+  .hero h1 .grad {
+    background: linear-gradient(96deg, var(--blue) 0%, var(--cyan) 96%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .hero-desc { margin: 0; max-width: 520px; font-size: 16px; line-height: 1.95; color: var(--body); }
+  .btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 9px;
+    padding: 13px 26px; border-radius: 12px;
+    font-size: 14.5px; font-weight: 500;
+    transition: transform 0.18s, box-shadow 0.22s, background 0.22s, border-color 0.22s;
+  }
+  .btn-main {
+    color: #fff;
+    background: linear-gradient(135deg, var(--blue) 0%, var(--blue-deep) 100%);
+    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.30);
+  }
+  .btn-main:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(37, 99, 235, 0.38); }
+  .btn-ghost {
+    color: var(--ink); background: #fff;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+  }
+  .btn-ghost:hover { border-color: #C9D6F5; color: var(--blue); transform: translateY(-2px); }
+
+  /* 首屏图形 */
+  .hero-art { position: relative; height: 400px; }
+  .blob {
+    position: absolute; width: 300px; height: 300px; border-radius: 50%;
+    right: 36px; top: 26px;
+    background: linear-gradient(135deg, #3B82F6 0%, #22D3EE 100%);
+    filter: blur(2px);
+    opacity: 0.92;
+    animation: float 7s ease-in-out infinite;
+  }
+  .blob-2 {
+    position: absolute; width: 168px; height: 168px; border-radius: 50%;
+    right: 232px; top: 206px;
+    background: linear-gradient(135deg, #FBBF24 0%, #F97316 100%);
+    opacity: 0.5; filter: blur(4px);
+    animation: float 9s ease-in-out infinite reverse;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-14px); }
+  }
+  .ring {
+    position: absolute; right: 8px; top: 0;
+    width: 360px; height: 360px; border-radius: 50%;
+    border: 1px dashed rgba(37, 99, 235, 0.28);
+  }
+  .fc {
+    position: absolute; background: #fff; border-radius: 14px;
+    padding: 13px 16px; box-shadow: var(--shadow);
+    display: flex; align-items: center; gap: 11px;
+    border: 1px solid rgba(231, 235, 243, 0.9);
+  }
+  .fc .fi {
+    width: 32px; height: 32px; border-radius: 9px; flex: none;
+    display: grid; place-items: center;
+  }
+  .fc .ft { display: block; font-size: 11.5px; color: var(--muted); line-height: 1.5; }
+  .fc .fv { display: block; font-size: 15px; font-weight: 600; color: var(--ink); line-height: 1.5; }
+  .fc-1 { left: 0; top: 44px; animation: float 6.4s ease-in-out infinite; }
+  .fc-2 { right: 6px; bottom: 34px; animation: float 7.6s ease-in-out infinite reverse; }
+  .fc-3 { left: 40px; bottom: 96px; animation: float 8.4s ease-in-out infinite; }
+
+  /* ---------- 通用区块 ---------- */
+  .sec { padding: 88px 0; }
+  .sec-head { max-width: 640px; margin-bottom: 46px; }
+  .sec-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+  .tag {
+    display: inline-block; padding: 5px 12px; border-radius: 7px;
+    font-size: 11.5px; letter-spacing: 1.6px; font-weight: 500;
+    color: var(--blue); background: #EAF1FF;
+    margin-bottom: 16px;
+  }
+  .sec-head h2 {
+    margin: 0 0 12px; font-size: clamp(25px, 3vw, 36px);
+    font-weight: 700; letter-spacing: -0.3px; color: var(--ink); line-height: 1.34;
+  }
+  .sec-head p { margin: 0; font-size: 15.5px; line-height: 1.9; color: var(--body); }
+
+  /* ---------- 关于 ---------- */
+  .about-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; align-items: center; }
+  .about-copy p { margin: 0 0 16px; font-size: 15.5px; line-height: 2; color: var(--body); }
+  .about-copy p:last-child { margin-bottom: 0; }
+  .about-copy strong { color: var(--ink); font-weight: 600; }
+  .quote-card {
+    background: linear-gradient(150deg, #EEF4FF 0%, #F0FBFD 100%);
+    border: 1px solid #DCE8FF;
+    border-radius: 22px; padding: 34px 32px;
+    box-shadow: 0 16px 40px rgba(37, 99, 235, 0.08);
+  }
+  .quote-card .q {
+    margin: 0 0 22px; font-size: 21px; line-height: 1.72; font-weight: 600; color: #17325E;
+  }
+  .q-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .q-stat { background: rgba(255, 255, 255, 0.86); border-radius: 12px; padding: 14px 12px; text-align: center; }
+  .q-stat b { display: block; font-size: 19px; color: var(--blue); letter-spacing: -0.3px; }
+  .q-stat span { font-size: 11.5px; color: var(--muted); }
+
+  /* ---------- 业务卡 ---------- */
+  .biz-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+  .biz {
+    position: relative; background: var(--card);
+    border: 1px solid var(--border); border-radius: 20px;
+    padding: 30px 30px 28px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.26s, box-shadow 0.26s, border-color 0.26s;
+  }
+  .biz:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 22px 48px rgba(15, 23, 42, 0.10);
+    border-color: #D3E0FA;
+  }
+  .biz-ico {
+    width: 50px; height: 50px; border-radius: 14px;
+    display: grid; place-items: center; margin-bottom: 20px;
+  }
+  .i-blue  { background: linear-gradient(135deg, #E8F0FF, #D6E4FF); }
+  .i-cyan  { background: linear-gradient(135deg, #E0FAFE, #CCF3F9); }
+  .i-amber { background: linear-gradient(135deg, #FFF6E5, #FDEBC8); }
+  .i-green { background: linear-gradient(135deg, #E6FAF2, #D2F5E6); }
+  .biz .num {
+    position: absolute; right: 26px; top: 26px;
+    font-size: 12px; font-weight: 600; color: #C3CFE2; letter-spacing: 1px;
+  }
+  .biz h3 { margin: 0 0 10px; font-size: 19px; font-weight: 600; color: var(--ink); letter-spacing: 0.2px; }
+  .biz p { margin: 0 0 18px; font-size: 14px; line-height: 1.9; color: var(--body); }
+  .chips { display: flex; flex-wrap: wrap; gap: 7px; }
+  .chips span {
+    font-size: 12px; color: #37517A;
+    background: #F3F6FC; border: 1px solid #E4EAF4;
+    border-radius: 7px; padding: 4px 10px;
+  }
+
+  /* ---------- 优势 ---------- */
+  .why { background: #FFFFFF; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .why-card {
+    border-radius: 16px; padding: 24px 22px;
+    background: #FAFBFE; border: 1px solid #EDF1F8;
+    transition: transform 0.24s, box-shadow 0.24s, background 0.24s;
+  }
+  .why-card:hover { transform: translateY(-4px); background: #fff; box-shadow: var(--shadow); }
+  .why-card .dot {
+    width: 34px; height: 34px; border-radius: 10px; margin-bottom: 16px;
+    display: grid; place-items: center; font-size: 13px; font-weight: 700;
+  }
+  .d-blue  { background: #E9F1FF; color: var(--blue); }
+  .d-cyan  { background: #E2F8FD; color: #0891B2; }
+  .d-amber { background: #FFF4E0; color: #D97706; }
+  .d-green { background: #E6FAF2; color: #059669; }
+  .why-card h3 { margin: 0 0 8px; font-size: 16px; font-weight: 600; color: var(--ink); }
+  .why-card p { margin: 0; font-size: 13.3px; line-height: 1.85; color: var(--body); }
+
+  /* ---------- 流程 ---------- */
+  .flow-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; position: relative; }
+  .step {
+    position: relative; background: #fff;
+    border: 1px solid var(--border); border-radius: 18px;
+    padding: 26px 24px; box-shadow: var(--shadow-sm);
+  }
+  .step .sn {
+    width: 38px; height: 38px; border-radius: 50%;
+    display: grid; place-items: center; margin-bottom: 16px;
+    font-size: 14px; font-weight: 700; color: #fff;
+    background: linear-gradient(135deg, var(--blue), var(--cyan));
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.26);
+  }
+  .step h3 { margin: 0 0 7px; font-size: 16px; font-weight: 600; color: var(--ink); }
+  .step p { margin: 0; font-size: 13.2px; line-height: 1.85; color: var(--body); }
+  .step::after {
+    content: ""; position: absolute; right: -14px; top: 44px;
+    width: 8px; height: 2px; background: #CFDCF3; border-radius: 2px;
+  }
+  .step:last-child::after { display: none; }
+
+  /* ---------- CTA ---------- */
+  .cta-band { padding: 0 0 88px; }
+  .cta {
+    position: relative; overflow: hidden;
+    border-radius: 26px; padding: 54px 56px;
+    background: linear-gradient(120deg, #1D4ED8 0%, #2563EB 44%, #06B6D4 100%);
+    box-shadow: 0 24px 54px rgba(37, 99, 235, 0.26);
+    display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap;
+    color: #fff;
+  }
+  .cta::before {
+    content: ""; position: absolute; right: -60px; top: -70px;
+    width: 260px; height: 260px; border-radius: 50%;
+    background: rgba(255, 255, 255, 0.10);
+  }
+  .cta::after {
+    content: ""; position: absolute; right: 90px; bottom: -80px;
+    width: 180px; height: 180px; border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+  }
+  .cta h3 { position: relative; margin: 0 0 10px; font-size: 26px; font-weight: 700; letter-spacing: 0.2px; }
+  .cta p { position: relative; margin: 0; font-size: 14.5px; line-height: 1.9; color: rgba(255, 255, 255, 0.86); max-width: 560px; }
+  .btn-white {
+    position: relative;
+    background: #fff; color: var(--blue-deep);
+    box-shadow: 0 10px 26px rgba(8, 30, 80, 0.22);
+  }
+  .btn-white:hover { transform: translateY(-2px); }
+
+  /* ---------- 页脚 ---------- */
+  footer { background: #F1F5FB; border-top: 1px solid var(--border); padding: 54px 0 30px; }
+  .foot-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 34px; }
+  .foot-brand { display: flex; align-items: flex-start; gap: 11px; margin-bottom: 14px; }
+  .foot-brand .logo-cn { font-size: 15px; }
+  .foot p { margin: 0; font-size: 13px; line-height: 1.95; color: var(--muted); }
+  .foot h4 {
+    margin: 0 0 14px; font-size: 12px; letter-spacing: 1.6px;
+    color: var(--ink); font-weight: 600;
+  }
+  .foot ul { margin: 0; padding: 0; list-style: none; }
+  .foot li { margin-bottom: 8px; }
+  .foot a { font-size: 13px; color: var(--body); transition: color 0.2s; }
+  .foot a:hover { color: var(--blue); }
+  .copyright {
+    margin-top: 40px; padding-top: 20px; border-top: 1px solid #DFE6F2;
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+    gap: 10px; font-size: 12.5px; color: var(--muted);
+  }
+  .copyright a { color: var(--muted); transition: color 0.2s; }
+  .copyright a:hover { color: var(--blue); }
+  .icp { display: inline-flex; align-items: center; gap: 7px; }
+  .icp svg { opacity: 0.7; }
+
+  /* ---------- 响应式 ---------- */
+  @media (max-width: 1000px) {
+    .hero-in { grid-template-columns: 1fr; gap: 40px; }
+    .hero-art { height: 320px; max-width: 520px; }
+    .blob { width: 240px; height: 240px; right: 60px; }
+    .blob-2 { width: 130px; height: 130px; right: 210px; top: 160px; }
+    .ring { width: 290px; height: 290px; right: 36px; }
+    .about-grid { grid-template-columns: 1fr; gap: 34px; }
+    .why-grid { grid-template-columns: repeat(2, 1fr); }
+    .flow-grid { grid-template-columns: repeat(2, 1fr); }
+    .step::after { display: none; }
+    .foot-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 860px) {
+    .nav-menu { display: none; }
+    html { scroll-padding-top: 74px; }
+  }
+  @media (max-width: 680px) {
+    .wrap, .nav-in { padding-left: 18px; padding-right: 18px; }
+    .hero { padding: 44px 0 54px; }
+    .hero h1 { font-size: 30px; }
+    .hero-desc { font-size: 14.5px; }
+    .hero-art { height: 260px; }
+    .blob { width: 200px; height: 200px; right: 24px; top: 10px; }
+    .blob-2 { width: 110px; height: 110px; right: 160px; top: 130px; }
+    .ring { width: 240px; height: 240px; right: 4px; }
+    .fc { padding: 10px 12px; gap: 8px; }
+    .fc-1 { left: 0; top: 8px; }
+    .fc-2 { right: 0; bottom: 4px; }
+    .fc-3 { display: none; }
+    .sec { padding: 56px 0; }
+    .biz-grid, .why-grid, .flow-grid { grid-template-columns: 1fr; }
+    .biz { padding: 26px 22px; }
+    .cta { padding: 36px 26px; border-radius: 20px; }
+    .cta h3 { font-size: 21px; }
+    .cta-band { padding-bottom: 56px; }
+    footer { padding: 40px 0 26px; }
+    .foot-grid { grid-template-columns: 1fr; gap: 26px; }
+    .copyright { margin-top: 28px; font-size: 11.5px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="logo" href="#top">
+      <span class="logo-mark">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="6.6" r="2.2" stroke="#fff" stroke-width="1.8"/>
+          <circle cx="6.4" cy="16.6" r="2.2" stroke="#fff" stroke-width="1.8"/>
+          <circle cx="17.6" cy="16.6" r="2.2" stroke="#fff" stroke-width="1.8"/>
+          <path d="M10.3 8.4 8.2 14.8M13.7 8.4l2.1 6.4M8.6 16.6h6.8"
+                stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="logo-txt">
+        <span class="logo-cn">德祥生物</span>
+        <span class="logo-en">DEXIANG BIOTECH</span>
+      </span>
+    </a>
+    <nav class="nav-menu">
+      <a href="#about">关于我们</a>
+      <a href="#why">我们的优势</a>
+      <a href="#process">合作流程</a>
+    </nav>
+    <a class="nav-cta" href="#contact">联系我们</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-in">
+      <div>
+        <h1>健康产业的<br><span class="grad">产品与技术伙伴</span></h1>
+        <p class="hero-desc">
+          德祥（广州）生物科技有限公司立足广州，以稳定的供应能力与配套技术为支撑，
+          为客户提供从选型、交付到长期使用的完整服务。
+        </p>
+        <div class="btns">
+          <a class="btn btn-main" href="#about">
+            了解德祥
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 12h15M13.5 6.5 19 12l-5.5 5.5" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a class="btn btn-ghost" href="#process">查看合作流程</a>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="ring"></div>
+        <div class="blob"></div>
+        <div class="blob-2"></div>
+
+        <div class="fc fc-1">
+          <span class="fi" style="background:#E9F1FF">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <path d="M12 21s7-5.2 7-10.4A7 7 0 0 0 5 10.6C5 15.8 12 21 12 21z" stroke="#2563EB" stroke-width="1.9" stroke-linejoin="round"/>
+              <circle cx="12" cy="10.4" r="2.4" stroke="#2563EB" stroke-width="1.9"/>
+            </svg>
+          </span>
+          <span>
+            <span class="ft">服务半径</span>
+            <span class="fv">本地</span>
+          </span>
+        </div>
+
+        <div class="fc fc-2">
+          <span class="fi" style="background:#E2F8FD">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <path d="M12 3.6 19 6.5v5c0 4.3-2.9 7.6-7 8.6-4.1-1-7-4.3-7-8.6v-5L12 3.6z" stroke="#0891B2" stroke-width="1.8" stroke-linejoin="round"/>
+              <path d="M9 11.6l2.2 2.2 4-4.2" stroke="#0891B2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span>
+            <span class="ft">经营备案</span>
+            <span class="fv">资质齐备</span>
+          </span>
+        </div>
+
+        <div class="fc fc-3">
+          <span class="fi" style="background:#E6FAF2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <path d="M4.6 6.5h14.8v8.6h-8.2l-4.2 3.2v-3.2H4.6z" stroke="#059669" stroke-width="1.8" stroke-linejoin="round"/>
+              <path d="M8.6 10.4h6.8M8.6 12.9h4" stroke="#059669" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span>
+            <span class="ft">响应方式</span>
+            <span class="fv">专人对接</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关于 -->
+  <section class="sec" id="about">
+    <div class="wrap about-grid">
+      <div class="about-copy">
+        <span class="tag">ABOUT US</span>
+        <h2 style="margin:0 0 18px;font-size:clamp(25px,3vw,36px);font-weight:700;color:var(--ink);line-height:1.34;letter-spacing:-0.3px;">
+          小团队，<br>把交付做成确定性
+        </h2>
+        <p>
+          德祥生物是一家把"产品"和"技术"放在一起做的公司。我们既供应稳定的产品，
+          也提供配套的技术支持与服务落地。
+        </p>
+        <p>
+          对客户来说，差别在于不必在供货商和技术方之间反复解释同一件事——
+          从选型、报价到部署、系统对接，由<strong>同一支团队跟到底</strong>。
+        </p>
+        <p>
+          规模不大，这是实话，也是我们的方式：决策链短，响应快，
+          承诺过的事按时交付，交付完还有人接电话。
+        </p>
+      </div>
+
+      <div class="quote-card">
+        <p class="q">"我们不擅长把话说满，<br>更擅长把事做完。"</p>
+        <div class="q-stats">
+          <div class="q-stat"><b>专人</b><span>全程对接</span></div>
+          <div class="q-stat"><b>及时</b><span>响应反馈</span></div>
+          <div class="q-stat"><b>本地</b><span>服务半径</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 优势 -->
+  <section class="sec why" id="why">
+    <div class="wrap">
+      <div class="sec-head center">
+        <span class="tag">WHY US</span>
+        <h2>我们把话说小一点</h2>
+        <p>不靠规模取胜，靠把每一单做得清楚、交付得准时。</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="dot d-blue">01</div>
+          <h3>供应链</h3>
+          <p>常备品类现货供应，非标品类按项目调配，交期提前讲清楚。</p>
+        </div>
+        <div class="why-card">
+          <div class="dot d-cyan">02</div>
+          <h3>技术配套</h3>
+          <p>不只供货，还能把设备联网、数据记录与系统对接一起落地。</p>
+        </div>
+        <div class="why-card">
+          <div class="dot d-amber">03</div>
+          <h3>合规</h3>
+          <p>已完成相应经营备案，票据与流程按规范办理，验收时材料齐全。</p>
+        </div>
+        <div class="why-card">
+          <div class="dot d-green">04</div>
+          <h3>本地</h3>
+          <p>立足本地范围内响应半径短，支持更直接。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 流程 -->
+  <section class="sec" id="process">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">PROCESS</span>
+        <h2>从一通需求开始</h2>
+        <p>四个环节，每一步都有人对应，不会出现"找不到人"的空档。</p>
+      </div>
+
+      <div class="flow-grid">
+        <div class="step">
+          <div class="sn">1</div>
+          <h3>沟通</h3>
+          <p>了解使用场景、品类要求与时间节点，先判断真正需要什么。</p>
+        </div>
+        <div class="step">
+          <div class="sn">2</div>
+          <h3>方案</h3>
+          <p>给出可选配置与对应报价，差异列清楚，把决定权留给客户。</p>
+        </div>
+        <div class="step">
+          <div class="sn">3</div>
+          <h3>交付</h3>
+          <p>按约到货、安装调试、完成验收，随附完整票据与资料。</p>
+        </div>
+        <div class="step">
+          <div class="sn">4</div>
+          <h3>服务</h3>
+          <p>后续的补给、维护、系统调整，都能找到同一个对接人。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band" id="contact">
+    <div class="wrap">
+      <div class="cta">
+        <div>
+          <h3>有需求，先说需求</h3>
+          <p>把使用场景、时间节点与具体要求告诉我们，我们给出可执行的建议与报价，从一次对话开始。</p>
+        </div>
+        <a class="btn btn-white" href="#top">
+          回到顶部
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 19V5M6.5 10.5 12 5l5.5 5.5" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <span class="logo-mark" style="width:30px;height:30px;border-radius:9px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+			  <circle cx="12" cy="6.6" r="2.2" stroke="#fff" stroke-width="1.8"/>
+			  <circle cx="6.4" cy="16.6" r="2.2" stroke="#fff" stroke-width="1.8"/>
+			  <circle cx="17.6" cy="16.6" r="2.2" stroke="#fff" stroke-width="1.8"/>
+			  <path d="M10.3 8.4 8.2 14.8M13.7 8.4l2.1 6.4M8.6 16.6h6.8"
+					stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+          </span>
+          <span class="logo-cn">德祥（广州）生物科技有限公司</span>
+        </div>
+        <p>把每一件事做扎实，做长久。</p>
+      </div>
+      <div>
+        <h4>快速导航</h4>
+        <ul>
+          <li><a href="#about">关于我们</a></li>
+          <li><a href="#why">我们的优势</a></li>
+          <li><a href="#process">合作流程</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>联系我们</h4>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <span>© 2026 德祥（广州）生物科技有限公司 版权所有</span>
+      <span class="icp">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 3.4 19.4 6.6v5.2c0 4.5-3 8-7.4 9-4.4-1-7.4-4.5-7.4-9V6.6L12 3.4z"
+                stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+        </svg>
+        <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">粤ICP备xxx</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
